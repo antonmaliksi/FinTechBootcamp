@@ -29,6 +29,7 @@ print("The total value of the loans is:", sum(loan_costs))
 # Print the average loan amount
 print("The average loan amount is:", sum(loan_costs) / len(loan_costs))
 
+
 """Part 2: Analyze Loan Data.
 
 Analyze the loan to determine the investment evaluation.
@@ -89,6 +90,7 @@ if present_value >= cost:
 else: 
     print("The loan is too expensive!")
 
+
 """Part 3: Perform Financial Calculations.
 
 Perform financial calculations using functions.
@@ -111,12 +113,19 @@ new_loan = {
 # @TODO: Define a new function that will be used to calculate present value.
 #    This function should include parameters for `future_value`, `remaining_months`, and the `annual_discount_rate`
 #    The function should return the `present_value` for the loan.
-# YOUR CODE HERE!
+future_value = new_loan.get("future_value")
+print(future_value)
 
+remaining_months = new_loan.get("remaining_months")
+print(remaining_months)
+
+annual_discount_rate = 0.2
+
+present_value = future_value / (1+(annual_discount_rate/12)) ** remaining_months
 
 # @TODO: Use the function to calculate the present value of the new loan given below.
 #    Use an `annual_discount_rate` of 0.2 for this new loan calculation.
-# YOUR CODE HERE!
+
 print(f"The present value of the loan is: {present_value}")
 
 
